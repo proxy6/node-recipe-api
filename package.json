@@ -14,11 +14,11 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.0"
   },
-  "description": "",
   "devDependencies": {
     "nodemon": "^2.0.4"
   },
   "engines": {
     "node": "12.16.2"
-  }
+  },
+  "description": ""
 }

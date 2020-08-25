@@ -5,14 +5,15 @@ var router = express.Router();
 var food_controller = require("../controllers/food");
 
 // a simple test url to check that all of our files are communicating correctly.
-router.get("/test", food_controller.test);
+router.get("/foods/test", food_controller.test);
 
-router.post("/create", food_controller.food_create);
+router.post("/foods/create", food_controller.food_create);
 
-router.get("/:id", food_controller.food_details);
+router.get("/foods/:id", food_controller.food_details);
+router.get("/all", food_controller.getAllFood);
 
-router.put("/:id/update", food_controller.food_update);
+router.put("/foods/:id/update", food_controller.food_update);
 
-router.delete("/:id/delete", food_controller.food_delete);
+router.delete("/foods/:id/delete", food_controller.food_delete);
 
 module.exports = router;

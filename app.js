@@ -29,10 +29,16 @@ mongoose
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/foods", food);
+app.use("/api/", food);
 
 var port = process.env.PORT || 3500;
 
 app.listen(port, () => {
   console.log("Server is up and running on port numner " + port);
+});
+
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "welcome to recipe api",
+  });
 });
