@@ -8,7 +8,7 @@ exports.test = function (req, res) {
 // Get all causes
 exports.getAllFood = function (req, res) {
   Food.find()
-    .select("_id title ingredent procedure")
+    .select("_id name ingredent procedure")
     .then((allFood) => {
       return res.status(200).json({
         Foods: allFood,
